@@ -1,0 +1,148 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:linear-gradient(to bottom,#080808,#111111);
+    color:white;
+    font-family:'Segoe UI', Arial, sans-serif;
+    min-height:100vh;
+}
+
+/* Header */
+
+.hero-text{
+    text-align:center;
+    padding:50px 20px 30px;
+}
+
+.hero-text h1{
+    font-family:'Oxanium',sans-serif;
+    font-size:5rem;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:4px;
+    margin-bottom:10px;
+
+    background:linear-gradient(
+        90deg,
+        #ff0000,
+        #ff3c00,
+        #ff7b00
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 0 20px rgba(255,80,0,.3);
+}
+.hero-text p{
+    color:#bdbdbd;
+    font-size:1.1rem;
+}
+
+/* Gallery */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:30px;
+    padding:30px;
+    max-width:1500px;
+    margin:auto;
+}
+
+/* Cards */
+
+.card{
+    background:#171717;
+    border:1px solid #252525;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+    transition:all 0.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* Images */
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    display:block;
+    transition:transform 0.5s ease;
+}
+
+.card:hover img{
+    transform:scale(1.08);
+}
+
+/* Download Button */
+
+.download-btn{
+    display:block;
+    text-align:center;
+    padding:15px;
+    text-decoration:none;
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+    background:linear-gradient(90deg,#ff0080,#ff6b00);
+    transition:all 0.3s ease;
+}
+
+.download-btn:hover{
+    filter:brightness(1.15);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#333;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#555;
+}
+.signature{
+    font-family:'Oxanium',sans-serif;
+    font-size:1rem;
+    letter-spacing:10px;
+    color:#ff5500;
+    margin-bottom:15px;
+    text-transform:uppercase;
+}
+.hero-text h1{
+    position:relative;
+}
+
+.hero-text h1::after{
+    content:'';
+    display:block;
+    width:220px;
+    height:4px;
+    margin:15px auto;
+    background:linear-gradient(
+        90deg,
+        #ff0000,
+        #ff7b00
+    );
+    border-radius:50px;
+}
